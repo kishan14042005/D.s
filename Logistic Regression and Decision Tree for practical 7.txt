@@ -1,0 +1,11 @@
+library(datasets) 
+ir_data<-iris 
+head(ir_data) 
+
+
+levels(ir_data$Species) 
+
+sum(is.na(ir_data))
+
+ir_data<-ir_data[1:100,] 
+print(ir_data)

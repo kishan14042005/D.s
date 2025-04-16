@@ -1,0 +1,25 @@
+crop.data <- read.csv("C:/Users/kc140/OneDrive/Documents/Wholesale.csv") 
+head(crop.data) 
+
+
+str(crop.data)
+
+names(crop.data)
+
+
+one.way <- aov(Milk ~ Channel, data = crop.data) 
+summary(one.way) 
+
+Fit <- aov(formula = Milk ~ Channel, data = crop.data) 
+summary(Fit)
+
+
+crop.data$Channel <- as.factor(crop.data$Channel) 
+Fit <- aov(Milk ~ Channel, data = crop.data) 
+summary(Fit) 
+
+tukey_result <- TukeyHSD(Fit) 
+print(tukey_result) 
+
+
+plot(tukey_result)

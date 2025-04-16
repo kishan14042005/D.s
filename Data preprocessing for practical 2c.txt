@@ -1,0 +1,24 @@
+import pandas as pd 
+file =open('Titanic.csv') 
+type(file)
+
+
+import csv 
+csvreader=csv.reader(file) 
+df = pd.read_csv('Titanic.csv') 
+print(df.to_string()) 
+print(df) 
+
+df.head(25)
+
+
+df.dropna(inplace=True) 
+df.head(25) 
+
+
+
+df2 = df.fillna(value=0) 
+df2 
+
+df3 = df.fillna(value=5) 
+df3

@@ -1,0 +1,14 @@
+LungCapData <- read.table(file.choose(), sep = ",",header = TRUE) 
+attach(LungCapData) 
+names(LungCapData)
+
+class(Fresh) 
+
+class(Milk)
+
+class(Grocery) 
+
+cor(Region,Channel)
+
+mod<-lm(Channel~Region) 
+summary(mod)
